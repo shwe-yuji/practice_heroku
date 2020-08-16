@@ -1,11 +1,19 @@
 Hello Heroku!
 
 .input-form
+= form_with model: @book, url: books_path do |f|
   TITLE
-  %input
+  = f.text_area :title
   PRICE
-  %input
+  = f.number_field :price
   MEMO
-  %input
+  = f.text_area :memo
   SUBIT
-  = submit_tag 'SUBMIT'
+  = f.submit 'SUBMIT'
+
+.book-list
+  - @books.each do |book|
+    .book-list__info
+      = book.title
+      = "#{book.price}円"
+      = book.memo
