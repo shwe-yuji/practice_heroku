@@ -1,15 +1,19 @@
-Hello Heroku!
+.hello-heroku
+  = 'Hello Heroku!'
 
-.input-form
-= form_with model: @book, url: books_path, local: true do |f|
-  TITLE
-  = f.text_area :title
-  PRICE
-  = f.number_field :price
-  MEMO
-  = f.text_area :memo
-  SUBIT
-  = f.submit 'SUBMIT'
+.form
+= form_with model: @book, url: books_path, class: 'input-form',local: true do |f|
+  .input-form__text
+    = 'TITLE'
+  = f.text_area :title, class: 'input-form__input', placeholder: 'タイトル'
+  .input-form__text
+    = 'PRICE'
+  = f.number_field :price, class: 'input-form__input', placeholder: '価格'
+  .input-form__text
+    = 'MEMO'
+  = f.text_area :memo, class: 'input-form__input', placeholder: 'コメント'
+  .input-form__submit
+    = f.submit 'SUBMIT', class: 'input-form__submit--btn'
 
 .book-list
   - @books.each do |book|
@@ -17,4 +21,4 @@ Hello Heroku!
       = book.title
       = "#{book.price}円"
       = book.memo
-      = link_to '削除', book_path(book), method: :delete
+      = link_to '削除', book_path(book), class: 'book-list__info--link', method: :delete

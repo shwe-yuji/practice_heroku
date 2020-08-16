@@ -1,0 +1,40 @@
+.hello-heroku {
+  @include positionCenter;
+  font-size: 40px;
+}
+
+.input-form {
+  @include positionCenter;
+  font-size: 32px;
+
+  &__input {
+    @include positionCenter;
+    @include formSize;
+    font-size: 16px;
+    padding-top: 4px;
+  }
+
+  &__submit {
+
+    &--btn {
+      cursor: pointer;
+      @include formSize;
+    }
+  }
+}
+
+.book-list {
+  font-size: 32px;
+  padding-top: 8px;
+  @include positionCenter;
+
+  &__info {
+    &--link {
+      text-decoration: none;
+    }
+  }
+  &__info:hover {
+    color: blue;
+    text-decoration: underline;
+  }
+}
