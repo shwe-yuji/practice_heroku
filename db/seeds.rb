@@ -6,8 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Book.create!(
-  title: "鬼滅の刃",
-  price: "390",
-  memo: "無惨様"
+require 'faker'
+
+10.times do |i|
+  title = Faker::Book.title
+  price = Faker::Number.between(from: 200, to: 990)
+  memo = Faker::Book.genre
+  Book.create!(
+    title: title,
+    price: price,
+    memo: memo
 )
+end
