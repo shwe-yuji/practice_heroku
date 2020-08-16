@@ -1,7 +1,7 @@
 Hello Heroku!
 
 .input-form
-= form_with model: @book, url: books_path do |f|
+= form_with model: @book, url: books_path, local: true do |f|
   TITLE
   = f.text_area :title
   PRICE

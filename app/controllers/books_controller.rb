@@ -2,11 +2,8 @@ class BooksController < ApplicationController
   
   def create
     book = Book.new(book_params)
-    if book.save
-      redirect_to :root
-    else
-      render :root
-    end
+    book.save
+    redirect_to :root
   end
 
   private
