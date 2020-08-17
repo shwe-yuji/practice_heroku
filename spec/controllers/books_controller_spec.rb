@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'faker'
 
 id = Faker::Number.between(from: 1, to: 10)
 title = Faker::Book.title
