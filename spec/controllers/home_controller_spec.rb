@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'faker'
 
 RSpec.describe HomeController, type: :controller do
-  describe "GET index" do
+  describe "index" do
 
     it 'render root_path' do
       get :index
@@ -23,7 +23,7 @@ RSpec.describe HomeController, type: :controller do
     let(:book) {Book.new}
     it "assigns book" do
       get :index
-      expect(assigns(:book).attributes).to match book.attributes
+      expect(assigns(:book).attributes).to eq book.attributes
     end
 
   end
