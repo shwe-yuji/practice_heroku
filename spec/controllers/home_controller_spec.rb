@@ -1,5 +1,4 @@
 require 'rails_helper'
-require 'faker'
 
 RSpec.describe HomeController, type: :controller do
   describe "index" do
