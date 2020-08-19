@@ -1,15 +1,12 @@
 require 'rails_helper'
 require 'faker'
 
-id = Faker::Number.between(from: 1, to: 10)
 title = Faker::Book.title
 price = Faker::Number.between(from: 200, to: 990)
 memo = Faker::Book.genre
-book = Book.new(id: id, title: title, price: price, memo: memo)
 
 RSpec.describe BooksController, type: :controller do
   describe "create" do
-
     it "redirec to home index" do
       get :create, params: {book: {title: title, price: price, memo: memo}}
       expect(response).to redirect_to root_path
@@ -46,13 +43,14 @@ RSpec.describe BooksController, type: :controller do
   end
 
   describe "destroy" do
-    
     it "redirec to home index" do
+      book = create(:book)
       get :destroy, params: {id: book.id}
       expect(response).to redirect_to root_path
     end
 
     it "delete book" do
+      book = create(:book)
       expect{
         delete :destroy, params: {id: book.id}
       }.to change(Book, :count).by(-1)
