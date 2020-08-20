@@ -21,4 +21,4 @@
       = book.title
       = "#{book.price}円"
       = book.memo
-      = link_to '削除', book_path(book), id: book.id, class: 'book-list__info--link', method: :delete
+      = link_to '削除', book_path(book.id), id: book.id, class: 'book-list__info--link', method: :delete
