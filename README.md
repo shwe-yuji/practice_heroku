@@ -5,7 +5,7 @@ Practice_Heroku
 Herokuにデプロイする練習用アプリ
 
 # 使い方
-https://practice-yuji-heroku.herokuapp.com/にアクセス
+https://practice-yuji-heroku.herokuapp.com/ にアクセス
 
 TITEL PRICE MEMOの３項目に値を打ち込んでSUBMITボタンをクリック
 
