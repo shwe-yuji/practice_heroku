@@ -15,7 +15,9 @@ TITEL PRICE MEMOの３項目に値を打ち込んでSUBMITボタンをクリッ�
 
 # 環境
 Ruby 2.5.1
+
 Rails 5.2.4.3
+
 MySQL 5.6.47
 
 # 製作者
